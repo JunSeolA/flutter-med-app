@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 // sample_drugs.dart 와 drug.dart 모델을 가져올 수 있도록 경로를 확인해주세요.
-// 예시: import '../data/sample_drugs.dart';
-// 예시: import '../models/drug.dart';
+import 'lib/data/sample_drugs.dart'; //<-- 새로 추가
+import 'lib/models/drug.dart'; //<-- 새로 추가
 // 만약 위 파일들이 아직 없다면, 이 import는 주석 처리하고 아래 _myDrugs를 빈 리스트로 시작하세요.
 // 실제로는 B님의 상태 관리 로직을 통해 약물 목록을 받아옵니다.
 // 여기서는 UI 개발을 위해 임시 데이터를 사용하거나 빈 리스트로 시작할 수 있습니다.
 
-// 이전 InputPage, ResultPage 관련 import와 routes는 삭제된 상태여야 합니다.
-
-// class MyApp ... (이 부분은 동일)
 
 class HomePage extends StatefulWidget {
   @override
