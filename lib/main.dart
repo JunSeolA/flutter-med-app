@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'pages/input_page.dart';
-import 'pages/result_page.dart'; // 요기까지 위에 정리
+import 'screens/homepage.dart'; // 새로 추가한 부분
 
 void main() => runApp(MyApp());
 
@@ -8,29 +7,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: '전설아의 첫 앱',
-      home: HomePage(),
+      title: '약물 상호작용 경고 시스템', 
+      home: HomePage(), // 이제 이 HomePage는 import 된 screens/homepage.dart 의 것을 사용합니다.
       routes: {
-        '/input': (context) => InputPage(),
-        '/result': (context) => ResultPage(), // 여기에 포함!
+        
       },
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text("홈")),
-      body: Center(
-        child: ElevatedButton(
-          child: Text("약물 입력하러 가기"),
-          onPressed: () {
-            Navigator.pushNamed(context, '/input');
-          },
-        ),
-      ),
     );
   }
 }
